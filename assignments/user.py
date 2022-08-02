@@ -34,6 +34,9 @@ user_mango.enroll()
 user_mango.spend_points(50)
 user_mango.enroll()
 user_mango.display_info()
+# As soon as I start chaining, I receive the error on line 33 - 
+# "AttributeError: 'NoneType' object has no attribute 'spend_points'"
+# add return self to each method
 
 ####### CREATING SECOND USER #####################################################
 user_lucie = User("Lucie", "Chevreuil", "lc@f.com", 25)
