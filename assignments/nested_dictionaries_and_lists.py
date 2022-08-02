@@ -44,6 +44,16 @@ def iterate_dictionary(some_list):
 
 print(iterate_dictionary(students))
 
+# bonus by cam
+def iterate_dictionary_formatted(some_list):
+    for item in some_list:
+        str = ''
+        for key,val in item.items():
+            str += f"{key} - {val},"
+        print(str)
+
+iterate_dictionary_formatted(students)
+
 # should output: (it's okay if each key-value pair ends up on 2 separate lines;
 # bonus to get them to appear exactly as below!)
 # first_name - Michael, last_name - Jordan
