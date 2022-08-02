@@ -7,7 +7,7 @@ class BankAccount:
         self.balance = balance
         BankAccount.add_bank_account()
 
-####### CREATING CLASS METHOD #####################################################
+####### CREATING CLASS METHODS #####################################################
     @classmethod
     def print_all_instances(cls):
         return cls.number_of_accounts
@@ -49,5 +49,6 @@ user_lucie.deposit(100).deposit(200).deposit(220).withdraw(15000).yield_interest
 ####### CREATING SECOND USER #####################################################
 user_wesley = BankAccount(0.1, 10)
 user_wesley.deposit(10).deposit(10).withdraw(5).withdraw(5).withdraw(10).withdraw(11).yield_interest().display_account_info()
+
 
 print(BankAccount.print_all_instances())
