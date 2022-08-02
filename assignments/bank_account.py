@@ -1,14 +1,20 @@
 ####### CREATING A CLASS #####################################################
 class BankAccount:
+    number_of_accounts = 0
     # don't forget to add some default values for these parameters!
     def __init__(self, int_rate, balance):
         self.int_rate = int_rate
         self.balance = balance
+        BankAccount.add_bank_account()
 
 ####### CREATING CLASS METHOD #####################################################
-    # @classmethod
-    # def print_all_instances():
-        #not sure how to complete the bonus...
+    @classmethod
+    def print_all_instances(cls):
+        return cls.number_of_accounts
+
+    @classmethod
+    def add_bank_account(cls):
+        cls.number_of_accounts += 1
 
 ####### CREATING METHODS #####################################################
     def deposit(self, amount):
@@ -43,3 +49,5 @@ user_lucie.deposit(100).deposit(200).deposit(220).withdraw(15000).yield_interest
 ####### CREATING SECOND USER #####################################################
 user_wesley = BankAccount(0.1, 10)
 user_wesley.deposit(10).deposit(10).withdraw(5).withdraw(5).withdraw(10).withdraw(11).yield_interest().display_account_info()
+
+print(BankAccount.print_all_instances())
