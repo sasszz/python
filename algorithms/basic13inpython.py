@@ -139,8 +139,11 @@ print(zero_out_array_negative_vals([-1,-1,3,-1]))
 ######################################## ALGO THIRTEEN #############################################
 # # TODO: Given an array, move all values forward by one index, dropping the first and leaving a '0' value at the end.
 
-def shift_array_vals_left(key, arr):
-    # return arr[-key:]+arr[:-key] --> shifts array over 1 but does not zero out first value
+# def shift_array_vals_left(arr):
+#     arr[0] = 0
+#     for i in range(1, len(arr)):
+#         arr[i] = arr[i + 1]
 
+# print(shift_array_vals_left([1,2,3,4,5]))
 
-print(shift_array_vals_left(1,[1,2,3,4,5]))
+# return arr[-key:]+arr[:-key] --> shifts array over 1 but does not zero out first value
