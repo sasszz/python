@@ -1,0 +1,2 @@
+import keyword
+type.iskeyword
