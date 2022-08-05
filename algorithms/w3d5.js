@@ -42,11 +42,14 @@ const keys1 = ["abc", 3, "yo"];
 const vals1 = [42, "wassup", true];
 
 function newobj (arr1, arr2) {
-    var expected = {};
-    for(let i = 0; i < arr1.length; i++) {
-        expected[arr1[i]] = arr2[i];
+    if(arr1.length === 0) {
+        return {};
     }
-    return expected;
+    var object = {};
+    for(let i = 0; i < arr1.length; i++) {
+        object[arr1[i].toString()] = arr2[i];
+    }
+    return object;
 }
 
 console.log(newobj(keys1, vals1));
