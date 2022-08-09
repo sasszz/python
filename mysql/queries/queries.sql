@@ -39,3 +39,5 @@ SELECT * FROM ninjas WHERE dojo_id  = 1
 SELECT * FROM dojos WHERE id = (SELECT dojo_id FROM ninjas ORDER BY id DESC LIMIT 1);
 
 -- Submit your .txt file that contains all the queries you ran in the shell
+
+SELECT * FROM dojos LEFT JOIN ninjas ON dojos.id = ninjas.dojo_id;
